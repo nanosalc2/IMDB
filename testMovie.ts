@@ -58,4 +58,26 @@ origen.mainCharacterName = "Leonardo Dcaprio";
 origen.producer = "Emma Thomas";
 origen.distributor = "Warner";
 
+lalaLanda.actors = [ryan, emmaA];
+lalaLanda.director = damien;
+lalaLanda.writer = damien;
+lalaLanda.language = "ingles";
+lalaLanda.plataforma = "Amazon Prime";
+lalaLanda.isMCU = false;
+lalaLanda.mainCharacterName = "Ryan Gosling";
+lalaLanda.producer = "Fred Berger";
+lalaLanda.distributor = "Amazon Prime";
+
+granHotel.actors = [ralph, bill];
+granHotel.director = wes;
+granHotel.writer = wes;
+granHotel.language = "ingles";
+granHotel.plataforma = "Disney+";
+granHotel.isMCU = true;
+granHotel.mainCharacterName = "Ralph Fiennes";
+granHotel.producer = "Scott Rudin";
+granHotel.distributor = "Dusney+";
+
 origen.showAll();
+lalaLanda.showAll();
+granHotel.showAll();
