@@ -1,4 +1,4 @@
-import * as fs from 'fs';
+import * as fs from "fs";
 import { Professional } from "./Professional";
 import { Movie } from "./Movies";
 import { Imdb } from "./IMDB";
