@@ -10,10 +10,19 @@ let granHotel:Movie = new Movie("El Gran Hotel Budapest", 2014, "UK", "Comedia, 
 let peliculasNuevasArr:Movie[] = [origen, lalaLanda, granHotel];
 
 let peliculasNuevas:Imdb = new Imdb(peliculasNuevasArr);
-console.log(peliculasNuevas.peliculas);
+// console.log(peliculasNuevas.peliculas);
+
+
 
 let rutaArchivo = `imdbBBDD.json`
 
+
+peliculasNuevas.escribirEnFicheroJSON(rutaArchivo);
+peliculasNuevas.obtenerInstanciaIMDB(rutaArchivo);
+
+
+
+// ------------------// RETO 6 Lectura/Escritura en Fichero//---------------------------------//
 try 
 {
     // Convertimos el objeto a formato JSON
@@ -37,7 +46,7 @@ try
   // Convertimos el contenido JSON en un objeto JavaScript
   let objNuevoJSON = JSON.parse(archivoJSON);
 
-  // Creamos una instancia de MiClase utilizando los datos del objeto
+  // Creamos una instancia de intaObjNuevoJSON utilizando los datos del objeto
   let intaObjNuevoJSON = new Imdb(objNuevoJSON);
   intaObjNuevoJSON.peliculas
   console.log('Instancia creada:', intaObjNuevoJSON.peliculas);
@@ -46,4 +55,3 @@ catch (error)
 {
   console.error('Error al leer el archivo JSON:', error);
 }
-
