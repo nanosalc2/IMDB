@@ -14,7 +14,8 @@ console.log(peliculasNuevas.peliculas);
 
 let rutaArchivo = `imdbBBDD.json`
 
-try {
+try 
+{
     // Convertimos el objeto a formato JSON
     let peliculasString = JSON.stringify(peliculasNuevas.peliculas, null, 2);
   
@@ -22,6 +23,27 @@ try {
     fs.writeFileSync(rutaArchivo, peliculasString);
   
     console.log('Objeto guardado exitosamente en el archivo JSON.');
-  } catch (error) {
-    console.error('Error al guardar el objeto en el archivo JSON:', error);
-  }
+} 
+  catch (error) 
+{
+  console.error('Error al guardar el objeto en el archivo JSON:', error);
+}
+
+try 
+{
+  // Leemos el contenido del archivo JSON
+  let archivoJSON = fs.readFileSync(rutaArchivo, 'utf-8');
+
+  // Convertimos el contenido JSON en un objeto JavaScript
+  let objNuevoJSON = JSON.parse(archivoJSON);
+
+  // Creamos una instancia de MiClase utilizando los datos del objeto
+  let intaObjNuevoJSON = new Imdb(objNuevoJSON);
+  intaObjNuevoJSON.peliculas
+  console.log('Instancia creada:', intaObjNuevoJSON.peliculas);
+} 
+catch (error) 
+{
+  console.error('Error al leer el archivo JSON:', error);
+}
+

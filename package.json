@@ -1,0 +1,17 @@
+{
+  "dependencies": {
+    "@types/node": "^20.4.4",
+    "readline-sync": "^1.4.10",
+    "typescript": "^5.1.6"
+  },
+  "name": "imdb",
+  "description": "",
+  "version": "1.0.0",
+  "main": "IMDB.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
